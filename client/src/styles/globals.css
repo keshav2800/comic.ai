@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --black-gradient: linear-gradient( 144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+    --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+    --scrollbar-primary: #00040f;
+    --scrollbar-secondary: lightblue;
+  background-image: url("/assets/comics_bg_3.jpg");
+  background-size: cover;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+/* Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-secondary) var(--scrollbar-primary);
+}
+
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-primary);
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-secondary);
+    border-radius: 14px;
+    border: 3px solid var(--scrollbar-primary);
+}
+
+.text-gradient {
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #ff69b4 0.89%, #e066ff 17.23%, #c71585 42.04%, #800080 55.12%, #8a2be2 71.54%, #4b0082 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.btn-gradient {
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #ff69b4 0.89%, #e066ff 17.23%, #c71585 42.04%, #800080 55.12%, #8a2be2 71.54%, #4b0082 100%);
+  padding: 12px;
+  width: fit-content;
+  font-weight: 700;
+    color: white;
+  border-radius: 15px;
+}
+
+.bg-pink-purple-gradient {
+    background: linear-gradient(157.81deg, #ff69b4 -43.27%, #e066ff -21.24%, #c71585 12.19%, #800080 29.82%, #8a2be2 51.94%, #4b0082 90.29%);
+}
+
+.bg-black-gradient {
+    background: linear-gradient( 144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+}
+
+.bg-black-gradient-2 {
+    background: linear-gradient( -168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+}
+
+.bg-gray-gradient {
+    background: linear-gradient( 153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101d 95.11%);
+}
+
+.bg-discount-gradient {
+    background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.feature-card:hover {
+    background: var(--black-gradient);
+    box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+    margin-right: 0px;
+}
+
+.feedback-card {
+    background: transparent;
+}
+
+.feedback-card:hover {
+    background: var(--black-gradient);
+}
+
+.blue__gradient {
+    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+    filter: blur(123px);
+}
+
+.pink__gradient {
+    background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+    filter: blur(900px);
+}
+
+.white__gradient {
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(750px);
+}
+
+/* tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgb(10, 10, 10);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.blog-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 32px;
+    /* fallback */
+    max-height: 64px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
